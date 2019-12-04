@@ -53,6 +53,12 @@ namespace chef_and_dishes.Controllers
             }
             else
             {
+                if(newChef.DateOfBirth.Year==1){
+                    if(ModelState.ContainsKey("DateOfBirth")==true){
+                        ModelState["DateOfBirth"].Errors.Clear();
+                    }
+                    ModelState.AddModelError("DateOfBirth", "Invalid Date");
+                }
                 return View("NewChefView");
             }
         }

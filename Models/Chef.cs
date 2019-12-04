@@ -18,9 +18,9 @@ namespace chef_and_dishes.Models
         public string LastName { get; set; }
 
         [FutureDate]
-        [Required (ErrorMessage="Invalid")]
+        [Required]
         [Display (Name = "Date of Birth")]
-        [DataType(DataType.Date, ErrorMessage="TEST")]
+        [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
 
         public List<Dish> CreatedDishes { get; set; }
